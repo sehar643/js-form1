@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC Pakistan</title>
+</head>
+<body>
+    <script>
+
+        alert("KFC Pakistan");
+        alert("-------Wellcome to our menu---------\n" +
+            "1.  Pizza           =   3500\n" +
+            "2.  Shawarma   =   500\n" +
+            "3.  Burger         =   850\n" +
+            "4.  Sandwich    =   400");
+
+    var menu = {
+    1: { name: "Pizza", price: 3500 },
+    2: { name: "Shawarma", price: 500 },
+    3: { name: "Burger", price: 850 },
+    4: { name: "Sandwich", price: 400 },
+};
+
+    var item = prompt("Select an item (1-4):");
+    var selectedItem = menu[item];
+
+if (selectedItem) {
+    var quantity = prompt("Enter quantity:");
+    var total = selectedItem.price * quantity;
+    document.write("<h1>Total Bill =" + total+"<br></h1>"+
+    "<h4>Your order will be ready in 30 minutes</h4>"+
+    "<h2>----Thank you for visiting us----</h2>"+"<h4>We hope to see you again</h4>");
+} else {
+    document.write("Invalid item selection. Please select a valid item.");
+}
+
+    </script>
+</body>
+</html>
